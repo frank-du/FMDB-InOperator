@@ -5,7 +5,7 @@
 //  Created by Stefan Pauwels on 06.10.15.
 //
 
-#import "FMDatabase.h"
+@import FMDB;
 
 @interface FMDatabase (InOperator)
 

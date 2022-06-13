@@ -1,0 +1,25 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB-InOperator (1.0.0):
+    - FMDB (~> 2.7)
+  - FMDB/standard (2.7.5)
+
+DEPENDENCIES:
+  - FMDB-InOperator (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+
+EXTERNAL SOURCES:
+  FMDB-InOperator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FMDB-InOperator: 452aa82257f4b68d75c00320a3ab5f285a81639c
+
+PODFILE CHECKSUM: 4e449fae8e9ffc2c5088768202cba5b51d792812
+
+COCOAPODS: 1.11.3

@@ -21,8 +21,8 @@
     
     while (currentLocation != NSNotFound) {
         NSRange currentRange = NSMakeRange(currentLocation, sql.length - currentLocation);
-        NSRange questRange = [sql rangeOfString:@"?" options:nil range:currentRange];
-        NSRange squBrakQuestRange = [sql rangeOfString:@"[?]" options:nil range:currentRange];
+        NSRange questRange = [sql rangeOfString:@"?" options:NSCaseInsensitiveSearch range:currentRange];
+        NSRange squBrakQuestRange = [sql rangeOfString:@"[?]" options:NSCaseInsensitiveSearch range:currentRange];
         
         if (squBrakQuestRange.location != NSNotFound && squBrakQuestRange.location < questRange.location) {
             NSArray *arg = va_arg(args, NSArray*);
@@ -62,8 +62,8 @@
     
     while (currentLocation != NSNotFound) {
         NSRange currentRange = NSMakeRange(currentLocation, sql.length - currentLocation);
-        NSRange questRange = [sql rangeOfString:@"?" options:nil range:currentRange];
-        NSRange squBrakQuestRange = [sql rangeOfString:@"[?]" options:nil range:currentRange];
+        NSRange questRange = [sql rangeOfString:@"?" options:NSCaseInsensitiveSearch range:currentRange];
+        NSRange squBrakQuestRange = [sql rangeOfString:@"[?]" options:NSCaseInsensitiveSearch range:currentRange];
         
         if (squBrakQuestRange.location != NSNotFound && squBrakQuestRange.location < questRange.location) {
             NSArray *arg = va_arg(args, NSArray*);

@@ -1,20 +1,29 @@
 # FMDB-InOperator
-A simple extension for FMDB that allows passing NSArrays for MySQL IN Operators 
 
-Pass an array to FMDB using the method
+[![CI Status](https://img.shields.io/travis/frank-du/FMDB-InOperator.svg?style=flat)](https://travis-ci.org/frank-du/FMDB-InOperator)
+[![Version](https://img.shields.io/cocoapods/v/FMDB-InOperator.svg?style=flat)](https://cocoapods.org/pods/FMDB-InOperator)
+[![License](https://img.shields.io/cocoapods/l/FMDB-InOperator.svg?style=flat)](https://cocoapods.org/pods/FMDB-InOperator)
+[![Platform](https://img.shields.io/cocoapods/p/FMDB-InOperator.svg?style=flat)](https://cocoapods.org/pods/FMDB-InOperator)
 
-    - (BOOL)executeUpdateWithInOperator:(NSString *)sql, ...
+## Example
 
-like you would pass other NSObjects, but bind it to `[?]` instead of `?`
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-    NSArray *feedIds = @["feed/bla.com/rss.xml", "feed/foo.com/rss.xml", "feed/bar.com/rss.xml"]; 
-    [database executeUpdateWithInOperator:@"UPDATE feeds SET subscribed = ? WHERE id IN ([?])", @(1), feedIds];
+## Requirements
 
-Behind the scenes, this will produce a new NSArray with all arguments and a new Query by replacing any `?` with the correct number of `?`:
+## Installation
 
-    NSArray *arguments = @[@(1), "feed/bla.com/rss.xml", "feed/foo.com/rss.xml", "feed/bar.com/rss.xml"];
-    @"UPDATE feeds SET subscribed = ? WHERE id IN (?,?,?)"
+FMDB-InOperator is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-and call
+```ruby
+pod 'FMDB-InOperator'
+```
 
-    - (BOOL)executeUpdate:(NSString*)sql withArgumentsInArray:(NSArray *)arguments
+## Author
+
+
+
+## License
+
+FMDB-InOperator is available under the MIT license. See the LICENSE file for more info.

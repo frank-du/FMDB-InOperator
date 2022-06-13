@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/FMDB-InOperator.svg?style=flat)](https://cocoapods.org/pods/FMDB-InOperator)
 [![Platform](https://img.shields.io/cocoapods/p/FMDB-InOperator.svg?style=flat)](https://cocoapods.org/pods/FMDB-InOperator)
 
+A simple extension for FMDB that allows passing NSArrays for MySQL IN Operators
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
